@@ -10,6 +10,7 @@ export interface BaseSocketMessage {
   action: SocketAction;
   data: Message;
   datas?: string[];
+  a: ()=>string;
 }
 
 export interface UserJoinMessage extends BaseSocketMessage {

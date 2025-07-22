@@ -5,10 +5,10 @@ import {
   CallStartMessage,
   CallEndMessage,
   BaseSocketMessage,
-} from '../../interface/Message';
-import { SERVER_API_SOCKET_ENDPOINT } from '../../constant/index';
-import { UseCallCenterReturn } from './CallCenter.types';
-import { formatTime } from '../../utils/mediaUtils';
+} from '../interfaces/Message';
+import { SERVER_API_SOCKET_ENDPOINT } from '../constant/index';
+import { UseCallCenterReturn } from '../interfaces/CallCenter.types';
+import { formatTime } from '../utils/mediaUtils';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);

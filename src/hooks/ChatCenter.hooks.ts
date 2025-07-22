@@ -5,9 +5,9 @@ import {
   BaseSocketMessage,
   ChatMessage as SocketChatMessage,
   GetAllMessagesMessage,
-} from '../../interface/Message';
-import { SERVER_API_SOCKET_ENDPOINT } from '../../constant/index';
-import { RoomInfo, ChatMessage } from './ChatCenter.types';
+} from '../interfaces/Message';
+import { SERVER_API_SOCKET_ENDPOINT } from '../constant/index';
+import { RoomInfo, ChatMessage } from '../interfaces/ChatCenter.types';
 
 /**
  * Hook encapsulating room-list  chat logic.
@@ -19,6 +19,7 @@ export function useChatCenter(userId: string) {
   const [roomsLoading, setRoomsLoading] = useState(true);
   const [roomsError, setRoomsError] = useState<string | null>(null);
   const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
+
 
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isConnected, setIsConnected] = useState(false);
